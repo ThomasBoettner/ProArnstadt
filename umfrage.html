@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umfrage: Zukunft gestalten - Gemeinsam für Arnstadt</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .background-overlay {
+            /* Erstellt eine Überblendung mit einem Farbverlauf als Hintergrund */
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://proarnstadt.de/wp-content/uploads/2017/03/2014-09-07-Neideck-Ruine-Arnstadt-066_small.jpg') no-repeat center center;
+            background-size: cover;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Platziert die Überblendung hinter dem Formular */
+        }
+
+        .form-container {
+            /* Restliche Stile wie zuvor */
+            max-width: 500px;
+            margin: auto;
+            position: relative; /* Stellt sicher, dass der Container über der Überblendung liegt */
+            z-index: 1;
+            background-color: #f3f3f3;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        } {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #f3f3f3;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1, p {
+            text-align: center;
+        }
+
+        label {
+            color: #333;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5em;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #ffc107; /* Gelbe Farbe */
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            background-color: #e0a800;
+        }
+    </style>
+</head>
+<body>
+
+<div class="background-overlay"></div> <!-- Hintergrundüberblendung hinzugefügt -->
+
+<div class="form-container">
+    
+    <img src="https://proarnstadt.de/wp-content/uploads/2024/01/cropped-proarn_web_black.png" alt="Pro Arnstadt Logo" style="height:auto; border-radius: 8px 8px 0 0;">
+
+    <h1>Umfrage: Zukunft gestalten - Gemeinsam für Arnstadt</h1>
+    <p>Vielen Dank, dass Sie sich die Zeit nehmen, an unserer Umfrage teilzunehmen. Ihre Meinung ist uns sehr wichtig, um das Leben in Arnstadt zu verbessern. Bitte beantworten Sie die folgenden Fragen nach bestem Wissen.</p>
+
+    <form action="https://formspree.io/f/xpzvdzkg" method="POST">
+        <!-- Formspree Anti-Spam Feld -->
+        <input type="text" name="_gotcha" style="display:none">
+
+        <label for="satisfaction">Wie zufrieden sind Sie aktuell mit der Lebensqualität in Arnstadt?</label>
+        <select id="satisfaction" name="satisfaction" required>
+            <option value="">Bitte auswählen</option>
+            <option value="very_satisfied">Sehr zufrieden</option>
+            <option value="satisfied">Zufrieden</option>
+            <option value="neutral">Neutral</option>
+            <option value="unsatisfied">Unzufrieden</option>
+            <option value="very_unsatisfied">Sehr unzufrieden</option>
+        </select>
+
+        <label for="improvements">Was könnte Ihrer Meinung nach die Lebensqualität in Arnstadt verbessern?</label>
+        <textarea id="improvements" name="improvements"></textarea>
+
+        <label for="local_business_support">Wie bewerten Sie die Unterstützung lokaler Unternehmen in Arnstadt?</label>
+        <select id="local_business_support" name="local_business_support" required>
+            <option value="">Bitte auswählen</option>
+            <option value="excellent">Ausgezeichnet</option>
+            <option value="good">Gut</option>
+            <option value="average">Durchschnittlich</option>
+            <option value="poor">Schlecht</option>
+            <option value="very_poor">Sehr schlecht</option>
+        </select>
+
+        <label for="education_culture">Welche Angebote im Bereich Bildung und Kultur fehlen Ihrer Meinung nach in Arnstadt?</label>
+        <textarea id="education_culture" name="education_culture"></textarea>
+
+        <label for="traffic_parking">Wie bewerten Sie die Verkehrssituation und die Verfügbarkeit von Parkplätzen in Arnstadt?</label>
+        <select id="traffic_parking" name="traffic_parking" required>
+            <option value="">Bitte auswählen</option>
+            <option value="excellent">Ausgezeichnet</option>
+            <option value="good">Gut</option>
+            <option value="average">Durchschnittlich</option>
+            <option value="poor">Schlecht</option>
+            <option value="very_poor">Sehr schlecht</option>
+        </select>
+
+        <label for="traffic_parking_comments">Was könnte Ihrer Meinung nach die Verkehrssituation und die Verfügbarkeit von Parkplätzen in Arnstadt verbessern?</label>
+        <textarea id="traffic_parking_comments" name="additional_comments"></textarea>
+
+        <label for="green_spaces">Wie wichtig sind Ihnen Umwelt- und Grünflächen in Arnstadt?</label>
+        <select id="green_spaces" name="green_spaces" required>
+            <option value="">Bitte auswählen</option>
+            <option value="very_important">Sehr wichtig</option>
+            <option value="important">Wichtig</option>
+            <option value="somewhat_important">Etwas wichtig</option>
+            <option value="not_important">Nicht wichtig</option>
+            <option value="not_at_all_important">Überhaupt nicht wichtig</option>
+        </select>
+
+        <label for="additional_comments">Haben Sie weitere Anmerkungen oder Vorschläge, die Sie uns mitteilen möchten?</label>
+        <textarea id="additional_comments" name="additional_comments"></textarea>
+
+        <button type="submit">Senden</button>
+    </form>
+</div>
